@@ -4,6 +4,7 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import {createTheme, CssBaseline, ThemeProvider} from "@mui/material";
+import StyledEngineProvider from '@mui/material/StyledEngineProvider';
 
 const theme = createTheme({
     palette: {
@@ -30,7 +31,9 @@ ReactDOM.render(
   <React.StrictMode>
       <ThemeProvider theme={theme}>
           <CssBaseline/>
+          <StyledEngineProvider injectFirst>
            <App />
+          </StyledEngineProvider>
       </ThemeProvider>
   </React.StrictMode>,
   document.getElementById('root')
