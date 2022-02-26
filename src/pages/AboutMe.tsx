@@ -4,7 +4,7 @@ import "./AboutMe.css";
 
 const AboutMe: React.FC = () => {
     return (
-        <Container fixed>
+        <Container fixed className="contentContainer">
             <h1>UwU 👉👈</h1>
             <p>
                 I'm a student at the University of Auckland <br/>

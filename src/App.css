@@ -13,6 +13,11 @@
   align-items: center;
 }
 
+.contentContainer {
+  min-width: 250px;
+  max-width: 750px;
+}
+
 .navButton {
   padding-right: 25px;
   padding-left: 25px;
