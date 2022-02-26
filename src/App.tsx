@@ -11,8 +11,8 @@ function App() {
             <div className="App">
                 <header className="App-header">
                     <ButtonGroup variant="text" color="secondary" >
-                        <Button className="navButton" component={Link} to={"/"}>home / about - me</Button>
-                        <Button className="navButton" component={Link} to={"/"}>UwU</Button>
+                        <Button className="navButton" component={Link} to={"/"}>home / about me</Button>
+                        <Button className="navButton" component={Link} to={"/"}>Projects</Button>
                     </ButtonGroup>
                 </header>
 
