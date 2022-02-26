@@ -1,6 +1,6 @@
 import {Container} from "@mui/material";
 import React from "react";
-
+import "./AboutMe.css";
 
 const AboutMe: React.FC = () => {
     return (
