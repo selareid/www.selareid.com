@@ -1,9 +1,11 @@
 .App {
-  padding: 50px;
-  height: 80vh;
-  font-size: 1.25em;
+  height: 100vh;
+  padding: 25px 50px 50px;
+
+  font-size: 20px;
   font-family: Georgia serif;
   text-rendering: optimizeLegibility;
+  font-kerning: normal;
 }
 
 .App-header {
@@ -14,11 +16,25 @@
 }
 
 .contentContainer {
-  min-width: 250px;
   max-width: 750px;
 }
 
 .navButton {
   padding-right: 25px;
   padding-left: 25px;
+}
+
+@media (max-width: 600px) {
+  .App {
+    padding: 15px 10px 10px;
+  }
+
+  .contentContainer p br {
+    display: none;
+  }
+
+  .navButton {
+    padding-right: 10px;
+    padding-left: 10px;
+  }
 }

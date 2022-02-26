@@ -6,14 +6,17 @@ import "./AboutMe.css";
 const AboutMe: React.FC = () => {
     return (
         <Container fixed className="contentContainer">
-            <h1>Daniel Reid</h1>
-            <p>Curious about the world and how things work</p>
+            <h1 style={{marginBottom: "0px"}}>Daniel Reid</h1>
+            <h5 style={{marginTop: "0px"}}>Curious about the world and how things work</h5>
+
             <p>
-                I'm a student at the University of Auckland<br/>
-                Majoring in Mathematics and Computer Science
+                I'm a student at the University of Auckland. <br/>
+                Majoring in Mathematics and Computer Science.
             </p>
             <p>
-                Current Interests: Rust, Maths, React <br/>
+                Current Interests: Rust, Maths, React
+            </p>
+            <p style={{marginTop: "-20px"}}>
                 Languages I've Used: Rust, JS/TX, HTML/CSS, Python, Java
             </p>
 
