@@ -1,5 +1,6 @@
 import React from "react";
 import {Button, Container} from "@mui/material";
+import GitHubIcon from '@mui/icons-material/GitHub';
 import "./AboutMe.css";
 
 const AboutMe: React.FC = () => {
@@ -15,6 +16,9 @@ const AboutMe: React.FC = () => {
                 Current Interests: Rust, Maths, React <br/>
                 Languages I've Used: Rust, JS/TX, HTML/CSS, Python, Java
             </p>
+
+            <Button variant="text" color="secondary"
+                    startIcon={<GitHubIcon/>} href="https://github.com/selareid/">GitHub</Button>
         </Container>
     )
 };
