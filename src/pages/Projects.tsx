@@ -52,7 +52,12 @@ const Project: React.FC<{ project: ProjectProp }> = ({project}) => {
 const Projects: React.FC = () => {
     return (
         <Container fixed className="contentContainer">
-            <Grid container spacing={1} columns={1}>
+            <Grid container rowSpacing={1} columns={1}
+                  sx={{
+                      m: "15px 0 25px",
+                      p: "7px 15px 15px",
+                      bgcolor: "secondary.dark",
+                  }} >
             </Grid>
         </Container>
     )
