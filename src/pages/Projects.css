@@ -35,6 +35,14 @@
     margin: 7vh 0;
 }
 
+.ProjectModalBox .MuiCardActionArea-root {
+    cursor: default;
+}
+
+.ProjectModalBox .MuiCardActionArea-focusHighlight  {
+    visibility: hidden;
+}
+
 .ProjectModalBox .projectCards {
     display: flex;
     flex-direction: column;
