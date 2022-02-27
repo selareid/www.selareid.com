@@ -21,3 +21,23 @@
         padding: 5px;
     }
 }
+
+
+/* Modal Stylings */
+
+.ProjectModalContainer {
+    max-width: 750px;
+    width: 85vw;
+    padding: 0;
+}
+
+.ProjectModalBox {
+    margin: 7vh 0;
+}
+
+.ProjectModalBox .projectCards {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: left;
+}
