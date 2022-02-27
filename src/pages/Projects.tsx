@@ -37,7 +37,6 @@ const Project: React.FC<{ project: ProjectProp }> = ({project}) => {
             <Modal
                 open={open}
                 onClose={() => setOpen(false)}
-                sx={{overflowY: 'scroll'}}
                 aria-labelledby="modal-modal-title"
                 aria-describedby="modal-modal-description" >
                 <Container className="ProjectModalContainer">

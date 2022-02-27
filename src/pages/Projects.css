@@ -41,6 +41,9 @@
 
 .ProjectModalBox {
     margin: 7vh 0;
+
+    max-height: 80vh;
+    overflow-y: scroll;
 }
 
 .ProjectModalBox .MuiCardActionArea-root {
