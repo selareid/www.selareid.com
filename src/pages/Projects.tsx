@@ -6,6 +6,7 @@ interface ProjectProp {
     name: string,
     description: string,
     image: string,
+    expandedDesc?: JSX.Element
 }
 
 const Project: React.FC<{ project: ProjectProp }> = ({project}) => {
@@ -21,7 +22,9 @@ const Project: React.FC<{ project: ProjectProp }> = ({project}) => {
                 />
                 <Box>
                     <Typography variant="h5">{project.name}</Typography>
-                    <Typography variant="body2" color="text.secondary">{project.description}</Typography>
+                    <div>
+                        {open && project.expandedDesc !== undefined ? project.expandedDesc : <Typography variant="body2" color="text.secondary">{project.description}</Typography>}
+                    </div>
                 </Box>
             </CardContent>
         </CardActionArea>
