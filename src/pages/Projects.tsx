@@ -16,7 +16,6 @@ const Project: React.FC<{ project: ProjectProp }> = ({project}) => {
             <CardContent className="projectCards">
                 <CardMedia
                     component="img"
-                    sx={{width: 125}}
                     image={project.image}
                     alt="Project Image"
                 />

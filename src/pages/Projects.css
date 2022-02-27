@@ -1,3 +1,7 @@
+:root {
+    --project-card-img-width: 150px;
+}
+
 @media (min-width: 500px) {
     .projectCards {
         display: flex;
@@ -6,12 +10,13 @@
         padding: 0;
     }
 
+    /* Project Text Wrapper */
     .projectCards .MuiBox-root {
         margin-left: 5px;
     }
 
-    .NonModalWrapper .MuiCard-root {
-        max-height: 150px;
+    .NonModalWrapper .projectCards {
+        max-height: var(--project-card-img-width);
     }
 }
 
@@ -25,9 +30,16 @@
         padding: 5px;
     }
 
-    .NonModalWrapper .MuiCard-root {
-        max-height: 350px;
+    .NonModalWrapper .projectCards {
+        max-height: calc(var(--project-card-img-width) * 2);
     }
+}
+
+.projectCards .MuiCardMedia-root {
+    min-width: var(--project-card-img-width);
+    max-width: var(--project-card-img-width);
+    min-height: var(--project-card-img-width);
+    max-height: var(--project-card-img-width);
 }
 
 
