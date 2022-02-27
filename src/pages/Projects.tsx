@@ -30,7 +30,9 @@ const Project: React.FC<{ project: ProjectProp }> = ({project}) => {
 
     return (
         <Grid item xs={1}>
-            {card}
+            <div className="NonModalWrapper">
+                {card}
+            </div>
 
             <Modal
                 open={open}
