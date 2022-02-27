@@ -1,5 +1,5 @@
-import React from "react";
-import {Box, Card, CardActionArea, CardContent, CardMedia, Container, Grid, Typography} from "@mui/material";
+import React, {useState} from "react";
+import {Box, Card, CardActionArea, CardContent, CardMedia, Container, Grid, Modal, Typography} from "@mui/material";
 import "./Projects.css";
 
 interface ProjectProp {
@@ -9,24 +9,38 @@ interface ProjectProp {
 }
 
 const Project: React.FC<{ project: ProjectProp }> = ({project}) => {
+    const [open, setOpen] = useState(false);
+
+    const card = <Card color="secondary">
+        <CardActionArea onClick={() => setOpen(true)} disableRipple={open}>
+            <CardContent className="projectCards">
+                <CardMedia
+                    component="img"
+                    sx={{width: 125}}
+                    image={project.image}
+                    alt="Project Image"
+                />
+                <Box>
+                    <Typography variant="h5">{project.name}</Typography>
+                    <Typography variant="body2" color="text.secondary">{project.description}</Typography>
+                </Box>
+            </CardContent>
+        </CardActionArea>
+    </Card>;
+
     return (
         <Grid item xs={1}>
-            <Card color="secondary">
-                <CardActionArea>
-                    <CardContent className="projectCards">
-                        <CardMedia
-                            component="img"
-                            sx={{width: 125}}
-                            image={project.image}
-                            alt="Project Image"
-                        />
-                        <Box>
-                            <Typography variant="h5">{project.name}</Typography>
-                            <Typography variant="body2" color="text.secondary">{project.description}</Typography>
-                        </Box>
-                    </CardContent>
-                </CardActionArea>
-            </Card>
+            {card}
+
+            <Modal
+                open={open}
+                onClose={() => setOpen(false)}
+                aria-labelledby="modal-modal-title"
+                aria-describedby="modal-modal-description" >
+                <Box className="ProjectModalBox">
+                    {card}
+                </Box>
+            </Modal>
         </Grid>
     );
 }
