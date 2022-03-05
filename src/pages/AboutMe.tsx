@@ -1,27 +1,50 @@
 import React from "react";
-import {Button, Container} from "@mui/material";
+import {Button, Container, createTheme, Theme, ThemeProvider, Typography} from "@mui/material";
 import GitHubIcon from '@mui/icons-material/GitHub';
-import "./AboutMe.css";
 
 const AboutMe: React.FC = () => {
+    const headerTheme = {
+        fontFamily: "Georgia serif",
+        fontWeight: 600,
+    };
+
     return (
         <Container fixed className="contentContainer">
-            <h1 style={{marginBottom: "0px"}}>Daniel Reid</h1>
-            <h5 style={{marginTop: "0px"}}>Curious about the world and how things work</h5>
+            <ThemeProvider theme={(theme: Theme) => createTheme({
+                ...theme,
+                typography: {
+                    fontSize: 7,
+                    h1: headerTheme, h2: headerTheme, h3: headerTheme, h4: headerTheme, h5: headerTheme,
+                    body1: {
+                        fontSize: 17,
+                        fontFamily: "'JetBrains Mono', Georgia serif",
+                        textIndent: "-0.5em",
+                        marginInlineStart: "0.5em"
+                    },
+                    button: {
+                        ...theme.typography.button
+                    }
+                }
+            })}>
 
-            <p>
-                I'm a student at the University of Auckland. <br/>
-                Majoring in Mathematics and Computer Science.
-            </p>
-            <p>
-                Current Interests: Rust, Maths, React
-            </p>
-            <p style={{marginTop: "-20px"}}>
-                Languages I've Used: Rust, JS/TX, HTML/CSS, Python, Java
-            </p>
+                <Typography variant={"h1"} sx={{mt: "0.5em"}}>Daniel Reid</Typography>
+                <Typography variant={"h4"} sx={{mb: "1.5em"}}>Curious about the world and how things work</Typography>
 
-            <Button variant="text" color="secondary"
-                    startIcon={<GitHubIcon/>} href="https://github.com/selareid/">GitHub</Button>
+                <Typography>
+                    I'm a student at the University of Auckland. <br/>
+                    Majoring in Mathematics and Computer Science.
+                </Typography>
+                <Typography sx={{mt: "0.5em"}}>
+                    Current Interests: Rust, Maths, React
+                </Typography>
+                <Typography>
+                    Experience With: Rust, JS/TX, HTML/CSS, Python, Java, React, MUI, Ionic
+                </Typography>
+
+                <Button variant="text" color="secondary"
+                        startIcon={<GitHubIcon/>} href="https://github.com/selareid/"
+                        sx={{mt: "1em"}}>GitHub</Button>
+            </ThemeProvider>
         </Container>
     )
 };
