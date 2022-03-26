@@ -1,4 +1,4 @@
-import {Container, Grid} from "@mui/material";
+import {Container, Grid, Typography} from "@mui/material";
 import "./Projects.css";
 import Project from "../components/Project";
 
@@ -11,6 +11,7 @@ const Projects: React.FC = () => {
                       p: "7px 15px 15px",
                       bgcolor: "secondary.dark",
                   }} >
+                <Typography variant="body2" color="#000">{"I'm still working on this page. Projects will be listed soon."}</Typography>
             </Grid>
         </Container>
     )
