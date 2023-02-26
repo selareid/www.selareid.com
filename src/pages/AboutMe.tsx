@@ -35,7 +35,7 @@ const AboutMe: React.FC = () => {
                     Majoring in Mathematics and Computer Science.
                 </Typography>
                 <Typography sx={{mt: "0.5em"}}>
-                    Current Interests: Rust, Maths, React
+                    Current Interests: Mathematics - with a focus on modelling
                 </Typography>
                 <Typography>
                     Experience With: Rust, JS/TX, HTML/CSS, Python, Java, React, MUI, Ionic
