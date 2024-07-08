@@ -31,14 +31,14 @@ const AboutMe: React.FC = () => {
                 <Typography variant={"h4"} sx={{mb: "1.5em"}}>Curious about the world and how things work</Typography>
 
                 <Typography>
-                    I'm a student at the University of Auckland. <br/>
-                    Majoring in Mathematics and Computer Science.
+                    I'm a graduate student at the University of Auckland. <br/>
+                    Majoring in Mathematics.
                 </Typography>
                 <Typography sx={{mt: "0.5em"}}>
                     Current Interests: Mathematics - with a focus on modelling
                 </Typography>
                 <Typography>
-                    Experience With: Rust, JS/TX, HTML/CSS, Python, Java, React, MUI, Ionic
+                    Previous Experience With: Rust, JS/TX, HTML/CSS, Python, React, MUI, Ionic, Matlab
                 </Typography>
 
                 <Button variant="text" color="secondary"
